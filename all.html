@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- AXIOS -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css" />
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Skigames</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top border-nav-main">
+    <div class="container-fluid">
+      <a class="navbar-brand font-primary px-3 my-0" href="./homepage.html">SKIGAMES<img class="logo"
+          src="./media/logo.png" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+          <li class="nav-item mx-3 border-nav-menu">
+            <a class="text-decoration-none tx-acc text-reset font-secondary" href="./all.html">Tutti i giochi</a>
+          </li>
+          <li class="nav-item mx-3 border-nav-menu">
+            <a class="text-decoration-none tx-acc text-reset font-secondary" href="./contatti.html">Contatti</a>
+          </li>
+          <li class="nav-item mx-3 border-nav-menu">
+            <a class="text-decoration-none tx-acc text-reset font-secondary" href="#">Aggiungi gioco</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <p class="nav-item mx-3 mb-0">
+            <a class="text-decoration-none tx-acc text-reset font-s" href="register.html">
+              <i class="bi bi-person-plus fs-4 tx-p"></i>
+            </a>
+          </p>
+          <p class="nav-item mx-3 mb-0">
+            <a class="text-decoration-none tx-acc text-reset font-s" href="./login.html">
+              <i class="bi bi-person-check fs-4 tx-p"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5 py-5">
+    <div class="row justify-content-center my-3">
+      <div class="col-12 col-md-6">
+        <div class="input-group mb-3">
+          <input id="inputSearch" type="text" class="form-control rounded-0 p-3" placeholder="🔍 Cerca il tuo gioco"
+            aria-describedby="basic-addon2" />
+        </div>
+      </div>
+    </div>
+    <div class="row my-3">
+      <div class="col-12">
+        <h2 class="font-primary display-4 second">Tutti i giochi</h2>
+        <p class="font-secondary accent">
+          Cerca tra tutti i giochi il tuo preferito!
+        </p>
+      </div>
+    </div>
+    <div class="row my-3">
+      <div class="col-12 col-md-3 mb-3 ">
+        <select id="genresWrapper" class="form-select filter-select-all font-secondary">
+          <option id="resetCategory" selected>Tutte le categorie</option>
+        </select>
+      </div>
+      <div class="input-group-append">
+        <button class="input-group-text my-2 bg-warning font-secondary" for="inputGroupSelect02" id="buttonFilter">
+          <a href="#" class="text-decoration-none main">
+            Resetta le categorie
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5 py-5">
+    <div id="gamesWrapper" class="row"></div>
+  </div>
+
+  <div class="container-fluid bg-footer">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4 text-center mb-5">
+          <h2 class="font-title text-uppercase">SkiGames</h2>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-5">
+          <p class="lead font-secondary tx-acc mb-0">
+            2022 @ copyright 'Filippo Palliani'
+          </p>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-5">
+          <i class="bi bi-twitter fs-3 p-3 border-numbers-custom mx-3 acc"></i>
+          <i class="bi bi-twitch fs-3 p-3 border-numbers-custom mx-3 acc"></i>
+          <i class="bi bi-discord fs-3 p-3 border-numbers-custom mx-3 acc"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./all.js"></script>
+  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+</body>
+
+</html>

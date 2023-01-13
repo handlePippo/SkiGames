@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Nabla&family=Share+Tech&display=swap");
+
+:root {
+  --main-color: #222222;
+  --second-color: #b99d11;
+  --accent-color: #c5c6c7;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: black !important;
+  color: white !important;
+  overflow-x: hidden !important;
+}
+
+.bgchosing {
+  height: 30vh;
+}
+
+.font-title {
+  font-family: "Nabla", cursive;
+}
+
+.font-primary {
+  font-family: "Share Tech", sans-serif;
+}
+
+.font-secondary {
+  font-family: "Electrolize", sans-serif;
+}
+
+.main {
+  color: var(--main-color);
+}
+
+.second {
+  color: var(--second-color);
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
+.bg-main {
+  background-color: var(--main-color);
+}
+
+.bg-second {
+  background-color: var(--second-color);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url("./media/mobilebg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  header video {
+    display: none;
+  }
+}
+
+.border-visit {
+  border-bottom: 2px solid #ffe65b;
+  position: relative;
+}
+
+.border-visit::after {
+  position: absolute;
+  background-color: #ffe65b;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  right: 0px;
+  bottom: -10px;
+}
+
+.linkhomepage {
+  position: absolute;
+  top: 80px;
+  left: 15%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.main-a {
+  margin: 40px;
+  text-decoration: none !important;
+  color: #ffe65b !important;
+}
+
+.style-a {
+  margin-left: 80px;
+  color: #ffe65b !important;
+}
+
+.style-a::after {
+  position: absolute;
+  background-color: #ffe65b !;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  right: 170px;
+  bottom: 2px;
+}
+
+.main-a::after {
+  position: absolute;
+  background-color: #ffe65b;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  right: 106px;
+  bottom: 2px;
+}
+
+.navbar {
+  transition: all 0.4s;
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 999 !important;
+}
+
+.navbar .nav-link {
+  color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+}
+
+/* Change navbar styling on scroll */
+.navbar.active {
+  background: #fff;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+  color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+  color: #555;
+  text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+  color: #555;
+}
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+  .navbar {
+    background: #fff;
+  }
+
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: #555;
+  }
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.remove {
+  display: none;
+}
+
+.border-nav-menu {
+  position: relative;
+  transition: 0.4s;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.border-nav-menu::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: var(--main-color);
+  left: 0px;
+  bottom: -3px;
+}
+
+.border-nav-menu:hover::before {
+  bottom: 0px;
+}
+
+.border-nav-main {
+  border-bottom: 2px solid var(--accent-color) !important;
+  background-color: #b99d11;
+}
+
+.border-nav-main::before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 189px;
+  background-color: #fff;
+  top: 56px;
+  left: -9px;
+  transform: skew(-30deg);
+  background-color: #b99d11;
+  border-top: 2px solid #b99d11;
+  border-bottom: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
+  z-index: -1;
+}
+
+.par {
+  margin: 0px;
+  padding: 0px;
+}
+
+.bg-numbers-container {
+  background: linear-gradient(black, transparent, black),
+    url("./media/halo1.jpeg");
+}
+
+.border-visit {
+  border-bottom: 2px solid rgb(155, 155, 34);
+  position: relative;
+}
+
+.border-visit::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  background-color: rgb(155, 155, 34);
+  right: -2px;
+  bottom: -8px;
+}
+
+.border-numbers-custom {
+  background: linear-gradient(
+        to right,
+        var(--second-color) 2px,
+        transparent 2px
+      )
+      0 0,
+    linear-gradient(to right, var(--second-color) 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, var(--second-color) 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, var(--second-color) 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, var(--second-color) 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, var(--second-color) 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, var(--second-color) 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, var(--second-color) 2px, transparent 2px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+.cta {
+  position: relative;
+  background-color: black;
+  height: 0vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cta video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.cta .container {
+  position: relative;
+  z-index: 2;
+}
+
+.cta .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 1;
+}
+
+.btn-cta {
+  background-color: transparent;
+  border: 2px solid var(--second-color);
+  color: var(--acc-color);
+  font-size: 20px;
+}
+
+.bg-footer {
+  border-top: 2px solid var(--second-color);
+  position: relative;
+  background-color: #000;
+}
+
+.bg-footer::before {
+  position: absolute;
+  content: "";
+  height: 17%;
+  width: 28%;
+  top: -32px;
+  right: -83px;
+  border-top: 2px solid var(--second-color);
+  border-left: 2px solid var(--second-color);
+  border-bottom: 3px solid black;
+  transform: skew(-20deg);
+}
+
+.bg-form {
+  backdrop-filter: blur(10px);
+}
+
+.filter-select-all {
+  background: #000;
+  border: 2px solid var(--second-color);
+  color: var(--second-color);
+  border-radius: 0px;
+}
+
+.form-select {
+  background-image: url("./media/down.png");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}

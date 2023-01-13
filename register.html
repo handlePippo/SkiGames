@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- AXIOS -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Skigames</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top border-nav-main">
+    <div class="container-fluid">
+      <a class="navbar-brand font-primary px-3 my-0" href="./homepage.html">SKIGAMES<img class="logo"
+          src="./media/logo.png" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+          <li class="nav-item mx-3 border-nav-menu">
+            <a class="text-decoration-none tx-acc text-reset font-secondary" href="./all.html">Tutti i giochi</a>
+          </li>
+          <li class="nav-item mx-3 border-nav-menu">
+            <a class="text-decoration-none tx-acc text-reset font-secondary" href="#">Contatti</a>
+          </li>
+          <li class="nav-item mx-3 border-nav-menu">
+            <a class="text-decoration-none tx-acc text-reset font-secondary" href="#">Aggiungi gioco</a>
+          </li>
+        </ul>
+        <div class="d-flex font-secondary">
+          <p class="nav-item mx-3 mb-0">
+            <a class="text-decoration-none tx-acc text-reset font-s" href="register.html">
+              <i class="bi bi-person-plus fs-4 tx-p"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- HEADER -->
+  <header>
+    <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+    <div class="overlay"></div>
+
+    <!-- The HTML5 video element that will create the background video on the header -->
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="./media/bghomepage.mp4" type="video/mp4" />
+    </video>
+
+    <!-- The header content -->
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center justify-content-center">
+        <div class="w-50 text-white">
+          <form class="border-numbers-custom p-3 bg-form">
+            <div class="font-primary mb-3">
+              <div class="form-group font-primary my-3">
+                <label for="username" class="font-title">Username</label>
+                <input type="username" class="form-control" id="username" placeholder="Inserisci un username" />
+              </div>
+
+              <label for="exampleInputEmail1" class="font-title">Password</label>
+              <input type="password" class="form-control" id="password" aria-describedby="emailHelp"
+                placeholder="Inserisci una Password" />
+              <label for="exampleInputEmail1" class="font-title">Conferma Password</label>
+              <input type="password" class="form-control" id="password" aria-describedby="emailHelp"
+                placeholder="Re-inserisci la Password" />
+            </div>
+            <div class="form-group font-primary">
+              <label for="password" class="font-title">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="nomecognome@tuamail.it" />
+              <small id="emailHelp" class="form-text text-muted">Non condividiamo mai la tua mail con nessuno.</small>
+            </div>
+            <div class="form-group form-check font-primary">
+              <input type="checkbox" class="form-check-input rounded-0" id="email" />
+              <label class="form-check-label d-block text-start my-1" for="exampleCheck1">Consenti uso dati
+                personali</label>
+            </div>
+            <button type="submit" class="btn-cta rounded-0 px-2 my-3 font-secondary">
+              Registrati
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid bg-footer">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4 text-center mb-5">
+          <h2 class="font-title text-uppercase">SkiGames</h2>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-5">
+          <p class="lead font-secondary tx-acc mb-0">
+            2022 @ copyright 'Filippo Palliani'
+          </p>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-5">
+          <i class="bi bi-twitter fs-3 p-3 border-numbers-custom mx-3 acc"></i>
+          <i class="bi bi-twitch fs-3 p-3 border-numbers-custom mx-3 acc"></i>
+          <i class="bi bi-discord fs-3 p-3 border-numbers-custom mx-3 acc"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
